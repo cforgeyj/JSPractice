@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link href = "css/stylesheet.css" type = "text/css" />
+  <style>
+  button{
+    width: 56px;
+    height: 48px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <button id = "butt" onclick="change()" style="width: 56px"></button>
+  <!--<script src = "js/changeButton.js" ></script>-->
+  <script>
+  function change(){
+    changeColor();
+    console.log("CHANGE COLOR SHOULD HAVE EXECUTED ");
+  }
+  function changeColor(){
+    var butt = document.getElementById("butt");
+    butt.style.background = "red";
+    butt.style.marginLeft = "90%";
+    setTimeout(changeBack, 3000);
+  }
+  function changeBack(){
+    var butt = document.getElementById("butt");
+    butt.style.background = "white";
+    butt.style.marginLeft = "0%";
+  }
+
+
+  </script>
+</body>
+</html>
